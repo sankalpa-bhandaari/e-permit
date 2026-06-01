@@ -1,0 +1,279 @@
+/* --- Fonts & Variables --- */
+@import url("https://www.footprintadventure.com/uploads/img/1727936020-banner.jpg");
+
+:root {
+  
+  --color-bg: #f1ebeb;           /* Warm Alabaster */
+  --color-primary: #1A4D2E;      /* Deep Forest Green */
+  --color-primary-hover: #143d24;
+  --color-accent: #D97706;       /* Muted Gold/Amber */
+  --color-text-main: #1F2937;    /* Charcoal */
+  --color-text-muted: #4B5563;   /* Slate Gray */
+  --color-border: #E5E7EB;
+  
+  --container-max: 1400px;
+  --header-height: 80px;         
+}
+
+/* --- Layout --- */
+.hero-section {
+  background-color: var(--color-bg);
+  width: 100%;
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Split 50/50 */
+  width: 100%;
+  padding: 0cap;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  height: calc(100vh - var(--header-height));
+  min-height: 600px; /* Prevent squishing on short screens */
+}
+
+/* --- Left Column: Typography & Content --- */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4rem 0 6rem; /* Left padding ensures it doesn't hit edge */
+  z-index: 2;
+}
+
+/* Status Badge */
+.badge-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 255, 102, 0.147); /* Transparent Green */
+  color: var(--color-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 16px;
+  border-radius: 100px;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(26, 77, 46, 0.15); /* Static glow ring */
+}
+
+/* Headings */
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 5vw, 4.5rem); /* Responsive sizing */
+  line-height: 1.1;
+  color: var(--color-text-main);
+  margin-bottom: 1.25rem;
+  letter-spacing: -1px;
+}
+
+.highlight-text {
+  color: var(--color-primary);
+  font-style: italic;
+  position: relative;
+  /* Subtle highlight underline */
+  text-decoration: underline;
+  text-decoration-color: rgba(34, 33, 32, 0.3); /* Gold underline */
+  text-decoration-thickness: 4px;
+  text-underline-offset: 6px;
+}
+
+.hero-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+}
+
+/* Buttons */
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 8px; /* Slightly rounded, not full pill */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 4px 6px rgba(26, 77, 46, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(26, 77, 46, 0.25);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-text-main);
+  border: 1px solid #D1D5DB;
+}
+
+.btn-outline:hover {
+  border-color: var(--color-text-main);
+  background-color: white;
+  transform: translateY(-2px);
+}
+
+/* Trust Indicators */
+.trust-indicators {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+  width: fit-content;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.trust-item svg {
+  color: var(--color-primary); /* Icon color */
+}
+
+/* --- Right Column: Visual --- */
+.hero-visual {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-bottom-left-radius: 80px; 
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* --- Responsive Design --- */
+
+/* Tablet & Small Laptop */
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 0 3rem;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr; /* Stack visually */
+    grid-template-rows: 400px auto; /* Image on top, text below */
+    height: auto;
+  }
+
+  /* Reorder: Visual First, Content Second */
+  .hero-visual {
+    order: 1;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px; /* Symmetrical curve on mobile */
+    max-height: 400px;
+  }
+  
+  .hero-content {
+    order: 2;
+    padding: 2.5rem 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 0.9rem 1.5rem;
+  }
+
+  .trust-indicators {
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  .trust-item {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .trust-indicators {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}

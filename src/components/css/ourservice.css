@@ -1,0 +1,142 @@
+/* ==============================
+   OUR SERVICES SECTION
+============================== */
+.services-container {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #f5f6fa, #eef1f6);
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2.6rem;
+  margin-bottom: 50px;
+  color: #1e1e2f;
+  font-weight: 700;
+  position: relative;
+  text-decoration: underline;
+}
+
+.services-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #ffd700;
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 10px;
+  
+}
+
+/* ==============================
+   GRID
+============================== */
+.services-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ==============================
+   SERVICE CARD
+============================== */
+.service-card {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 35px 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  color: #1e1e2f;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover glow effect */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(143, 127, 38, 0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+}
+
+/* ==============================
+   ICON
+============================== */
+.service-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd700, #ffb700);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1e1e2f;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: rotate(8deg) scale(1.1);
+}
+
+/* ==============================
+   CONTENT
+============================== */
+.service-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+    text-decoration: underline;
+
+}
+
+.service-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+  .services-container {
+    padding: 60px 15px;
+  }
+
+  .services-title {
+    font-size: 2.1rem;
+  }
+
+  .service-card {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-title {
+    font-size: 1.8rem;
+  }
+
+  .service-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-content p {
+    font-size: 0.9rem;
+  }
+}

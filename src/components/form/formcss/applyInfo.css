@@ -1,0 +1,333 @@
+:root {
+  --primary: #10b981;
+  --primary-dark: #059669;
+  --bg-subtle: #f8fafc;
+  --border-color: #e2e8f0;
+  --text-main: #1e293b;
+  --text-light: #64748b;
+  --white: #ffffff;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.apply-container {
+  padding: 4px 2px;
+  background: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.apply-card {
+  background: var(--white);
+  width: 90%;
+  /* max-width: 900px; */
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.apply-header {
+  padding: 32px;
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apply-header h1 { font-size: 24px; color: var(--text-main); margin: 0; }
+.apply-header p { color: var(--text-light); margin: 4px 0 0 0; }
+
+.progress-badge {
+  background: #d1fae5;
+  color: var(--primary-dark);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================================
+   Switcher (Segmented Control)
+   ========================================= */
+.segmented-control {
+  display: flex;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin: 30px auto;
+  border: 1px solid var(--border-color);
+}
+
+.segmented-control button {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.segmented-control button.active {
+  background: var(--white);
+  color: var(--primary-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Sections */
+.form-section {
+  padding: 0 32px 32px;
+    background: #f0f9ff;
+  margin: 0 32px 32px;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #bae6fd;
+
+}
+.highlight{
+    padding: 0 32px 32px;
+    background: #9eb8db70;
+  margin: 0 32px 32px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ae2c2c;
+  border-style:dashed;
+}
+
+.section-title h3 {
+  font-size: 18px;
+  border-left: 4px solid var(--primary);
+  padding-left: 12px;
+  margin-bottom: 15px;
+}
+
+/* Grid Layouts */
+.applicant-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+    background: #f0f9ff; 
+    padding: 12px;
+}
+
+.guide-inner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+    background: #f0f9ff; 
+    padding: 12px;
+}
+
+
+.emergency-grid{
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+    background: #ffffff33; 
+    padding: 10px;
+}
+
+.full-width { grid-column: span 2; }
+.form-group { display: flex; flex-direction: column; }
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+input, select, textarea {
+  resize: vertical;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+
+input:focus { border-color: var(--primary); }
+
+/* Member Cards for Groups */
+.member-card {
+  background: var(--bg-subtle);
+  border-radius: 10px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border-color);
+   border: 1px solid #308aba;
+   padding: 10px;
+
+}
+
+.member-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1px;
+  background-color: #f0f9ff;
+  font-weight: 700;
+  color: var(--primary-dark); 
+  margin-bottom: 2px;
+}
+
+.remove-btn {
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-member-btn {
+  width: 100%;
+  padding: 14px;
+  border: 2px dashed var(--border-color);
+  background: transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.add-member-btn:hover { background: var(--bg-subtle); border-color: var(--primary); color: var(--primary); }
+
+/* Guide Box styling */
+.guide-box {
+  background: #f0f9ff;
+  margin: 0 32px 32px;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #bae6fd;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Actions */
+.form-actions {
+  padding: 32px;
+  background: var(--bg-subtle);
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-primary, .btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-secondary { background: white; border: 1px solid var(--border-color); color: var(--text-main); }
+
+
+/* =========================================
+   RESPONSIVE QUERIES
+   ========================================= */
+
+/* Tablet & Small Laptop (Max 1024px) */
+@media (max-width: 1024px) {
+  .applicant-grid,
+  .emergency-grid {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+  }
+  
+  .guide-inner-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Devices (Max 768px) */
+@media (max-width: 768px) {
+  .apply-container {
+    padding: 10px;
+  }
+
+  .apply-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding: 20px;
+  }
+  
+  .progress-badge {
+    align-self: center;
+  }
+
+  .form-section, 
+  .highlight, 
+  .guide-box {
+    margin: 0 16px 24px; /* Reduce side margins */
+    padding: 20px 16px;  /* Reduce internal padding */
+  }
+
+  /* Force Single Column on Mobile */
+  .applicant-grid,
+  .emergency-grid,
+  .guide-inner-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Reset spans so inputs take full width */
+  .full-width {
+    grid-column: span 1;
+  }
+
+  .member-card .applicant-grid {
+    padding: 16px;
+  }
+
+  .form-actions {
+    padding: 20px 16px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 12px 16px;
+    flex: 1; /* Buttons share width */
+  }
+}
+
+/* Small Mobile (Max 480px) */
+@media (max-width: 480px) {
+  .segmented-control {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse; /* Stack buttons, Next on top usually, or preserve order */
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+  }
+  
+  .title-area h1 {
+    font-size: 20px;
+  }
+}

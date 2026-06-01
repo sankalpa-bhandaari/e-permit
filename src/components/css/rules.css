@@ -1,0 +1,230 @@
+/* ==============================
+   RULES PAGE WRAPPER
+============================== */
+.rules-page {
+  background: linear-gradient(180deg, #f5f6fa, #eef1f6);
+  padding: 60px 20px 80px;
+  min-height: 100vh;
+}
+
+/* ==============================
+   HEADER
+============================== */
+.rules-header {
+  text-align: center;
+  max-width: 800px;
+  flex-direction: column;
+  margin: 0 auto 2.5rem;
+  padding: 1rem;
+}
+
+.rules-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #064e3b;
+  margin-bottom: 1rem; 
+  text-decoration: underline;
+}
+
+.rules-header p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* ==============================
+   WARNING BOX
+============================== */
+.rules-warning {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  padding: 20px 25px;
+  border-radius: 14px;
+  background: rgba(255, 80, 80, 0.1);
+  border-left: 6px solid #ff4d4d;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #b30000;
+}
+
+.warning-icon {
+  color: #ff4d4d;
+}
+
+.rules-warning p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ==============================
+   DO & DON'T CARDS
+============================== */
+.rules-cards {
+  max-width: 1200px;
+  margin: 0 auto 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+}
+
+.rules-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 35px 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* Titles */
+.rules-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+    text-decoration: underline;
+
+}
+
+/* Do Card */
+.rules-card.dos h2 {
+  color: #1b8a3a;
+}
+
+.rules-card.dos {
+  border-top: 5px solid #28a745;
+}
+
+/* Don't Card */
+.rules-card.donts h2 {
+  color: #c82333;
+}
+
+.rules-card.donts {
+  border-top: 5px solid #dc3545;
+}
+
+/* Lists */
+.rules-card ul {
+  list-style: none;
+}
+
+.rules-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.rules-card li .icon {
+  min-width: 18px;
+  margin-top: 3px;
+}
+
+/* ==============================
+   INFO / MINIMUM IMPACT SECTION
+============================== */
+.rules-info {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.rules-info h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 45px;
+  color: #086016;
+  font-weight: 700;
+    text-decoration: underline;
+
+}
+
+/* Info cards */
+.info-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  padding: 30px 28px;
+  margin-bottom: 30px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+}
+
+.info-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  color: #333;
+    text-decoration: underline;
+
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ==============================
+   ICON GLOBAL STYLE
+============================== */
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+  .rules-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .rules-info h2 {
+    font-size: 2rem;
+  }
+
+  .rules-card {
+    padding: 30px 22px;
+  }
+
+  .info-card {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rules-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .rules-header p {
+    font-size: 0.95rem;
+  }
+
+  .rules-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .info-card h3 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .rules-header h1 {
+    font-size: 2rem;
+  }
+
+  .rules-header p {
+    font-size: 1rem;
+  }
+}
